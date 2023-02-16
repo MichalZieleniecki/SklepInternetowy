@@ -27,7 +27,10 @@ header {
     z-index: 1;
     width: 100vw;
     padding: 2rem 0;
+    // backdrop-filter: blur(7.5px);
+    border-bottom: 00.063rem dashed;
     background-color: $darkGrey;
+
     .header__container {
         @extend .inner--default;
         display: flex;
@@ -69,7 +72,7 @@ header {
         flex-direction: column;
         align-items: center;
         padding: 5rem 10rem;
-        border: 0.100rem solid $white;
+        border: 0.063rem dashed;
         backdrop-filter: blur(3px);
         h1 {
             color: $darkGrey;
@@ -93,11 +96,37 @@ header {
             transition: box-shadow 0.25s;
             color: rgb(43, 43, 43);
         }
-
+        button .text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(45deg, $darkGrey, #434343);
+          }
+        button:after {
+            content: "";
+            border-radius: 18px;
+            position: absolute;
+            margin: 4px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            background: #0e0e10;
+          }
+          button:hover {
+            background-image: linear-gradient(-45deg, $darkGrey, #434343);
+            box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+          }
+          button:hover .text {
+            background-image: linear-gradient(-45deg, $darkGrey, #434343);
+          }
     }
 }
 
 footer {
-    background-color: $darkGrey;
-
+  background-color: $darkGrey;
+  text-align: left;
+  padding: 35px 45px;
+  border-top: 0.063rem dashed;
 }
