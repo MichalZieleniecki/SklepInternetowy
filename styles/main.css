@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #20211e;
+}
+
+.inner--default, .hero .hero__container, header .header__container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  padding: 2rem 0;
+  background-color: #20211e;
+}
+header .header__container {
+  display: flex;
+  justify-content: space-between;
+}
+header h4 {
+  color: white;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  cursor: pointer;
+  margin-left: 1rem;
+  border-bottom: 0.063rem solid transparent;
+  padding-bottom: 0.5rem;
+}
+header ul li:hover {
+  border-bottom: 0.063rem solid;
+  border-image-source: linear(white);
+  border-image-slice: 1;
+}
+
+.hero {
+  background-image: url("backgroundshoess.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero .hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 10rem;
+  border: 0.1rem solid white;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+.hero .hero__container h1 {
+  color: #20211e;
+  margin-bottom: 3rem;
+}
+.hero .hero__container p {
+  margin-bottom: 3rem;
+}
+.hero .hero__container button {
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  transform: translate(0);
+  background-image: linear-gradient(45deg, #20211e, #434343);
+  padding: 0.7em 2em;
+  border-radius: 65px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  transition: box-shadow 0.25s;
+  color: rgb(43, 43, 43);
+}
+
+footer {
+  background-color: #20211e;
+}/*# sourceMappingURL=main.css.map */
