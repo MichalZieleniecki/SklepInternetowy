@@ -39,18 +39,9 @@ class LayoutClass {
             <footer>
                 <div class="footer__container">
                     <div class="footer__container--column">
-                        <h4></h4>
+                        <h4>Footer</h4>
                         <ul>
-                            <li>sdsdsd</li>
-                            <li>sdsdsd</li>
-                        </ul>
-                        <ul>
-                            <li>sdsdsd</li>
-                            <li>sdsdsd</li>
-                        </ul>
-                        <ul>
-                            <li>sdsdsd</li>
-                            <li>sdsdsd</li>
+                            <li>Michał Zieleniecki &copy 2023</li>
                         </ul>
                     </div>
                 </div>
