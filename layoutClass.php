@@ -6,13 +6,13 @@ class LayoutClass {
         if(isset($_SESSION['signedIn']) && $_SESSION['signedIn'] === true) {
             $conditionReander = "
                 <li>
-                    <a href='logout.php'>Wyloguj</a>
+                    <a href='logout.php'>Wyloguj się</a>
                 </li>
             ";
         } else {
             $conditionReander = "
-                <li><a href='signInPage.php>Zaloguj się</a></li>
-                <li><a href='signUpPage.php>Zarejestruj się</a></li>
+                <li><a href='signInPage.php'>Zaloguj się</a></li>
+                <li><a href='signUpPage.php'>Zarejestruj się</a></li>
             ";
         }
 
@@ -22,15 +22,41 @@ class LayoutClass {
                 <h4>SKLEP</h4>
                 <nav>
                     <ul>
-                        <li><a>Home</a></li>
-                        <li><a>About us</a></li>
-                        <li><a>Contact</a></li>
                         $conditionReander
                     </ul>
                 </nav>   
             </div>
         </header>
-                
+        ";
+    }
+
+    static function printHeader2() {
+        $conditionReander = "";
+        if(isset($_SESSION['signedIn']) && $_SESSION['signedIn'] === true) {
+            $conditionReander = "
+                <li>
+                    <a href='logout.php'>Wyloguj się</a>
+                </li>
+            ";
+        } else {
+            $conditionReander = "
+                <li><a href='signInPage.php'>Zaloguj się</a></li>
+                <li><a href='signUpPage.php'>Zarejestruj się</a></li>
+            ";
+        }
+
+        echo "
+        <header>
+            <div class='header__container'>
+                <h4>SKLEP</h4>
+                <nav>
+                    <ul>
+                        <li><a href='index.php'>Home</a></li>
+                        $conditionReander
+                    </ul>
+                </nav>   
+            </div>
+        </header>
         ";
     }
 
