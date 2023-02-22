@@ -30,36 +30,6 @@ class LayoutClass {
         ";
     }
 
-    static function printHeader2() {
-        $conditionReander = "";
-        if(isset($_SESSION['signedIn']) && $_SESSION['signedIn'] === true) {
-            $conditionReander = "
-                <li>
-                    <a href='logout.php'>Wyloguj się</a>
-                </li>
-            ";
-        } else {
-            $conditionReander = "
-                <li><a href='signInPage.php'>Zaloguj się</a></li>
-                <li><a href='signUpPage.php'>Zarejestruj się</a></li>
-            ";
-        }
-
-        echo "
-        <header>
-            <div class='header__container'>
-                <h4>SKLEP</h4>
-                <nav>
-                    <ul>
-                        <li><a href='index.php'>Home</a></li>
-                        $conditionReander
-                    </ul>
-                </nav>   
-            </div>
-        </header>
-        ";
-    }
-
     static function printFooter() {
         echo '
             <footer>
