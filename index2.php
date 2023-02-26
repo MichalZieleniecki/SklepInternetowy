@@ -11,7 +11,7 @@ SystemClass::printHead("./styles/main.css");
 ?>
 <body>
     <?php
-    LayoutClass::printHeader2();
+    LayoutClass::printHeader();
     ?>
 
     <section class='hero'>

@@ -10,7 +10,7 @@
         $userPassword = htmlentities($_POST['userPassword'], ENT_QUOTES, "UTF-8");
 
         $sql = sprintf(
-            "SELECT * FROM users WHERE Email='%s' AND Haslo='%s'",
+            "SELECT * FROM users WHERE Email='%s' AND Password='%s'",
             mysqli_real_escape_string($connection, $userEmail),
             mysqli_real_escape_string($connection, $userPassword)
         );
@@ -22,8 +22,10 @@
                 $data = $result -> fetch_assoc();
                 $email = $data['Email'];
                 echo "uzytkownik: $user, email: $userEmail";
-                $_SESSION['id'] = $data['id'];
-                $_SESSION['user'] = $data['nazwa'];
+                $_SESSION['id'] = $data['Id'];
+                $_SESSION['nickname'] = $data['Nickname'];
+                $_SESSION['name'] = $data['Name'];
+                $_SESSION['surname'] = $data['Surname'];
                 $_SESSION['signedIn'] = true;
                 $_SESSION['email'] = $email;
 
@@ -37,4 +39,4 @@
             }
         }
     }
-    ?>
+?>
