@@ -23,7 +23,8 @@
         if($result = $connection -> query($sql)) {
 
             if($result -> num_rows > 0) {
-                echo "użytkownik już istnieje";
+                $_SESSION['signUpUserExistsError'] ='<br><span style="color:red">Taki użytkownik już istnieje</span>';
+                header('Location: SignUpPage.php');;
             }
             else {
                 if($password == $passwordRepeat) {
@@ -40,12 +41,12 @@
                         header('Location: index.php');
                     }
                     else{
-                        $_SESSION['signUpCountError'] ='<span style="color:red">Hasło musi zawierać min. 8 znaków!</span>';
+                        $_SESSION['signUpCountError'] ='<br><span style="color:red">Hasło musi zawierać min. 8 znaków!</span>';
                         header('Location: SignUpPage.php');
                     }
                 }
                 else{
-                    $_SESSION['signUpError'] ='<span style="color:red">Hasła nie są identyczne!</span>';
+                    $_SESSION['signUpError'] ='<br><span style="color:red">Hasła nie są identyczne!</span>';
                     header('Location: SignUpPage.php');
                 }
             }

@@ -18,8 +18,8 @@ SystemClass::printHead("./styles/main.css");
         <div class='hero__container'>
             <h1>Sklep Internetowy</h1>
             <p>Sklep</p>
-            <button href="index2.php" type='button'>
-                <a href="index2.php">Sklep Internetowy</a>
+            <button href="shopPage.php" type='button'>
+                <a href="shopPage.php">Sklep Internetowy</a>
         </div>
     </section>
 

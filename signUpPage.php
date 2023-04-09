@@ -36,7 +36,9 @@
         <a href="signInPage.php">Masz konto?</a>
         <a href="index.php">Strona główna</a>
         <?php
-		    if(isset($_SESSION['signUpError'])) echo $_SESSION['signUpError'];
+		    if(isset($_SESSION['signUpCountError'])) echo $_SESSION['signUpCountError'];
+            if(isset($_SESSION['signUpError'])) echo $_SESSION['signUpError'];
+            if(isset($_SESSION['signUpUserExistsError'])) echo $_SESSION['signUpUserExistsError'];
 		?>
     </form>
 </body>

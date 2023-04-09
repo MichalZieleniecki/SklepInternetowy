@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: #20211e;
+  background-image: url(backgroundshoess.png);
 }
 
 .inner--default, .hero .hero__container, header .header__container {
@@ -85,16 +85,9 @@ header ul li:hover {
   transform: translate(0);
   background-image: linear-gradient(45deg, #20211e, #434343);
   padding: 0.7em 2em;
-  border-radius: 65px;
+  border-radius: 50px;
   box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
   transition: box-shadow 0.25s;
-  color: rgb(43, 43, 43);
-}
-.hero .hero__container button .text {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(45deg, #20211e, #434343);
 }
 .hero .hero__container button:after {
   content: "";
@@ -112,8 +105,33 @@ header ul li:hover {
   background-image: linear-gradient(-45deg, #20211e, #434343);
   box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
 }
-.hero .hero__container button:hover .text {
-  background-image: linear-gradient(-45deg, #20211e, #434343);
+
+.shop__container {
+  margin-top: 92px;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+}
+.shop__container .shop__menu {
+  width: 200px;
+  padding-left: 10px;
+  background-color: #20211e;
+}
+.shop__container .shop__products {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.shop__container .shop__products img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 250px;
+  min-width: 200px;
 }
 
 footer {
@@ -121,8 +139,4 @@ footer {
   text-align: left;
   padding: 35px 45px;
   border-top: 0.063rem dashed;
-}
-
-body {
-  background-image: url(backgroundshoess.png);
 }/*# sourceMappingURL=main.css.map */

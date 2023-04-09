@@ -31,12 +31,14 @@
 
                 unset($_SESSION['signInError']);
                 header('Location: index.php');
-                // $result -> close();
+                $result -> close();
             } 
             else {
                 $_SESSION['signInError'] ='<span style="color:red">Nieprawidłowy login lub hasło!</span>';
                 header('Location: SignInPage.php');
             }
         }
+
+        $connection -> close();
     }
 ?>

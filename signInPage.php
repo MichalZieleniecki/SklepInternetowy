@@ -25,9 +25,12 @@
      	<input type="email" name="userEmail" placeholder="Email"><br>
      	<label>Hasło</label>
      	<input type="password" name="userPassword" placeholder="Hasło"><br>
-     	<button type="submit">Zaloguj</button>
+     	<button type="submit">Zaloguj się</button>
 		<a href="index.php">Home</a>
-		<a href="signUpPage.php">Sign Up</a>
+		<a href="signUpPage.php">Zarejestruj się</a>
+		<?php
+			if(isset($_SESSION['signInError'])) echo $_SESSION['signInError'];
+		?>
     </form>
 </body>
 </html>
